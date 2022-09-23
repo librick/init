@@ -1,0 +1,26 @@
+{
+    "gopls": {
+        "ui.semanticTokens": true
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.iconTheme": "vscode-icons",
+
+    "outline.icons": true,
+    "outline.problems.enabled": true,
+    "outline.problems.badges": true,
+    "outline.problems.colors": true,
+    "explorer.openEditors.visible": 0,
+    "window.autoDetectColorScheme": false,
+    "workbench.preferredDarkColorTheme": "One Monokai",
+    "workbench.colorTheme": "Visual Studio Dark - C++",
+    "telemetry.telemetryLevel": "off",
+    "workbench.enableExperiments": false,
+    "update.mode": "none",
+    "editor.fontFamily": "FiraCode Nerd Font",
+    "editor.fontLigatures": true,
+    "editor.rulers": [
+    16,24,32,64
+    ],
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": 1,
+}

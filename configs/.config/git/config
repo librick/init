@@ -1,0 +1,8 @@
+[user]
+	name = Eric McDonald
+	email = ericmcdonald@protonmail.com
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
+

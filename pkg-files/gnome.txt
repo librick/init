@@ -1,0 +1,15 @@
+baobab
+bulky
+cheese
+eog
+gnome-disk-utility
+gnome-calculator
+gnome-logs
+gnome-screenshot
+gnome-system-monitor
+gnome-terminal
+gnome-text-editor
+gnome-tweak-tool
+seahorse
+simple-scan
+xreader

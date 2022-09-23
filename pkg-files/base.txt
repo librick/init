@@ -1,0 +1,9 @@
+curl
+figlet
+git
+glibc
+ufw
+sudo
+wget
+tree
+envsubst

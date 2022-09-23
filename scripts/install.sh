@@ -17,6 +17,9 @@ echo -ne "
 # TODO: Configure AppArmor
 # TODO: Configure rkhunter
 
+# Disable swap
+sudo swapoff -a
+
 # Preemptively force misbehaving apps to follow XDG settings
 # See: https://wiki.archlinux.org/title/XDG_Base_Directory#Support.
 export ANDROID_HOME="$XDG_DATA_HOME"/android

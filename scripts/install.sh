@@ -8,7 +8,7 @@ echo -ne "
  ███████╗██║██████╔╝██║  ██║██║╚██████╗██║  ██╗
  ╚══════╝╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝
 ----------------------------------------------------------------
-  Automated Installer
+ Automated Installer
 ----------------------------------------------------------------
 "
 # TODO: Store blender config
@@ -48,7 +48,9 @@ cp ./configs/.config/git/* $HOME/.config/git/
 
 # Install common tools
 sudo apt-get update
+sudo rm -rf /etc/zsh
 xargs sudo apt-get install -y < ./pkg-files/base.txt
+sudo apt-get install -y vi vim nano
 # Ensure that ufw is installed and enabled
 sudo apt-get install -y ufw
 sudo systemctl enable ufw
@@ -69,10 +71,20 @@ sudo systemctl enable ufw
 
 # Install fonts
 sudo apt-get install -y curl
+rm -rf ~/.local/share/fonts/NerdFonts
 mkdir -p ~/.local/share/fonts/NerdFonts
 FONT_SRC="https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete.ttf"
 curl -fLo "${HOME}/.local/share/fonts/NerdFonts/Fira Code Regular Nerd Font Complete.ttf" $FONT_SRC
 fc-cache -v
+
+# Set up networking
+sudo apt-get install -y network-manager
+sudo systemctl enable --now NetworkManager
+
+# Install Gnome
+xargs sudo apt-get install -y < ./pkg-files/gnome.txt
+sudo systemctl enable gdm
+sudo systemctl set-default graphical.target
 
 # Install ohmyzsh
 sudo rm -f /etc/zsh/zshenv
@@ -99,15 +111,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$CARGO_HOME/env"
 # Use cargo to install lsd
 cargo install lsd
-
-# Set up networking
-sudo apt-get install -y network-manager dhclient
-sudo systemctl enable --now NetworkManager
-
-# Install Gnome
-xargs sudo apt-get install -y < ./pkg-files/gnome.txt
-sudo systemctl enable gdm
-sudo systemctl set-default graphical.target
 
 # Install Signal via trusted repository
 sudo rm -f /etc/apt/sources.list.d/signal*.list

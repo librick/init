@@ -7,3 +7,6 @@ sudo
 wget
 tree
 envsubst
+gpg
+zsh
+

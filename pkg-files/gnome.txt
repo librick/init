@@ -1,9 +1,12 @@
 baobab
 cheese
 eog
+evince
 gdm3
-gnome-disk-utility
+gedit
 gnome-calculator
+gnome-disk-utility
+gnome-font-viewer
 gnome-logs
 gnome-screenshot
 gnome-session
@@ -11,10 +14,6 @@ gnome-system-monitor
 gnome-terminal
 gnome-text-editor
 gnome-tweaks
+nautilus
 seahorse
 simple-scan
-
-evince
-nautilus
-gnome-font-viewer
-gedit

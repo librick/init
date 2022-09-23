@@ -7,12 +7,12 @@ ghex
 gimp
 hexchat
 keepassxc
-libreoffice-writer
 libreoffice-calc
+libreoffice-writer
 neovim
-pdfmod
 pavucontrol
-simplescreenrecorder
+pdfmod
 simple-scan
+simplescreenrecorder
 texmaker
 wireshark

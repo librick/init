@@ -16,7 +16,6 @@ echo -ne "
 # TODO: Automate Firefox config
 # TODO: Configure AppArmor
 # TODO: Configure rkhunter
-
 # After installing, set up Firefox with https://ffprofile.com.
 
 # Set initial environment variables

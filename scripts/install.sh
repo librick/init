@@ -40,7 +40,7 @@ cp ./configs/.config/git/* $HOME/.config/git/
 
 # Install common tools
 sudo apt-get update
-sudo apt-get install xargs
+sudo apt-get install -y xargs
 xargs sudo apt-get install -y < ./pkg-files/base.txt
 # Ensure that ufw is installed and enabled
 sudo apt-get install -y ufw

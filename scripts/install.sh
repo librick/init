@@ -14,9 +14,10 @@ echo -ne "
 # See: https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/weekly-builds/amd64/iso-cd/
 # TODO: Store blender config
 # TODO: Automate Firefox config
-# TODO: Install vscode
 # TODO: Configure AppArmor
 # TODO: Configure rkhunter
+
+# After installing, set up Firefox with https://ffprofile.com.
 
 # Set initial environment variables
 sh -c ./set-environment.sh
@@ -26,6 +27,8 @@ sudo swapoff -a
 mkdir -p $HOME/.config/git
 cp ./configs/.config/git/* $HOME/.config/git/
 # Install common tools
+sudo rm -f /etc/apt/sources.list.d/*.list
+sudo apt-get install -y apt-transport-https
 sudo apt-get update
 sudo rm -rf /etc/zsh
 xargs sudo apt-get install -y < ./pkg-files/base.txt
@@ -44,9 +47,6 @@ sh -c ./install-gnome.sh
 sh -c ./install-zsh.sh
 sh -c ./install-cargo-and-lsd.sh
 sh -c ./install-signal.sh
+sh -c ./install-vscode.sh
 sh -c ./install-flatpaks.sh
 sh -c ./install-packages.sh
-
-# Copy VSCode settings
-mkdir -p $HOME/.config/Code/User/
-cp ./configs/.config/Code/User/settings.json $HOME/.config/Code/User/

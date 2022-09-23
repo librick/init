@@ -2,7 +2,6 @@ blueman
 celluloid
 chromium
 deluge-gtk
-firefox
 gedit
 ghex
 gimp

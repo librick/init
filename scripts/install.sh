@@ -75,25 +75,33 @@ curl -fLo "${HOME}/.local/share/fonts/NerdFonts/Fira Code Regular Nerd Font Comp
 fc-cache -v
 
 # Install ohmyzsh
+sudo rm -f /etc/zsh/zshenv
+sudo mkdir -p /etc/zsh/
+sudo cp ./configs/etc/zsh/zshenv /etc/zsh/
 rm -rf $HOME/user/.oh-my-zsh/
-rm -f $HOME/.zshrc*
+rm -f $HOME/.zshrc* $HOME/.zcompdump* $HOME/.zsh_history* .lesshst
+source /etc/zsh/zshenv
 export ZDOTDIR=$HOME/.config/zsh
-mkdir -p $ZDOTDIR
+export ZSH=$HOME/.config/zsh/oh-my-zsh
+rm -rf $HOME/.config/zsh
 curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh > ohmyzsh-install.sh
 chmod +x ohmyzsh-install.sh
 ./ohmyzsh-install.sh --unattended
+rm -f ohmyzsh-install.sh
 sudo chsh -s /usr/bin/zsh
-
-# Copy ZSH configs
+rm -r $HOME/.zshrc*
 cp -r ./configs/.config/zsh/ $HOME/.config/
 
 # Install Rust's package manager, cargo:
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source "$CARGO_HOME/env"
 # Use cargo to install lsd
 cargo install lsd
 
 # Set up networking
-sudo apt-get install -y networkmanager dhclient
+sudo apt-get install -y network-manager dhclient
 sudo systemctl enable --now NetworkManager
 
 # Install Gnome

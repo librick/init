@@ -73,7 +73,7 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export LESSHISTFILE=-
 
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
-alias ls='lsd -ahl --color --group-dirs=first'
+alias ls='lsd -ahl --color=auto --group-dirs=first'
 alias sl='ls'
 alias lls='ls'
 alias v='vim'

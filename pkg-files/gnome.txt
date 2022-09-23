@@ -13,3 +13,8 @@ gnome-text-editor
 gnome-tweaks
 seahorse
 simple-scan
+
+evince
+nautilus
+gnome-font-viewer
+gedit

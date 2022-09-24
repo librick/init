@@ -53,3 +53,4 @@ sh -c ./install-signal.sh
 sh -c ./install-vscode.sh
 sh -c ./install-flatpaks.sh
 sh -c ./install-packages.sh
+echo "Done :)"

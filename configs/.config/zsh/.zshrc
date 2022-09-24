@@ -60,6 +60,7 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.local/bin/platform-tools
+export PATH=$PATH:/usr/local/go/bin
 
 export ANDROID_HOME="$XDG_DATA_HOME"/android
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
@@ -80,4 +81,3 @@ alias v='vim'
 alias vi='vim'
 
 unset LESS;
-

@@ -48,6 +48,7 @@ sh -c ./install-gnome.sh
 sh -c ./install-zsh.sh
 sh -c ./install-cargo-and-lsd.sh
 sh -c ./install-go.sh
+sh -c ./install-adb.sh
 sh -c ./install-signal.sh
 sh -c ./install-vscode.sh
 sh -c ./install-flatpaks.sh

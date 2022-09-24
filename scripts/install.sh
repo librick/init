@@ -23,7 +23,19 @@ sh -c ./set-environment.sh
 # Disable swap
 sudo swapoff -a
 # Set GRUB timeout
-sudo sed -i 's/timeout=5/timeout=1/g' /boot/grub/grub.cfg
+BOOT_GRUB_LOCATION=/boot/grub
+BOOT_THEME_NAME=framework
+git clone https://github.com/AdisonCavani/distro-grub-themes.git
+sudo sed -i 's/#?GRUB_TIMEOUT=[0-9]+/GRUB_TIMEOUT=1/g' /etc/default/grub
+# Install GRUB theme
+sudo sed -i 's/#?GRUB_GFXMODE=.*/GRUB_GFXMODE=1920x1080/g' /etc/default/grub
+sudo cp -r "./distro-grub-themes/customize/${BOOT_THEME_NAME}/" "${BOOT_GRUB_LOCATION}/themes"
+BOOT_THEME_TXT="${BOOT_GRUB_LOCATION}/themes/${BOOT_THEME_NAME}/theme.txt"
+sudo echo GRUB_THEME="$BOOT_THEME_TXT" >> /etc/default/grub
+sudo sed -i '/GRUB_THEME=/d' /etc/default/grub
+sudo bash -c "echo GRUB_THEME="$BOOT_THEME_TXT" >> /etc/default/grub"
+sudo update-grub
+
 # Copy git configs
 mkdir -p $HOME/.config/git
 cp ./configs/.config/git/* $HOME/.config/git/

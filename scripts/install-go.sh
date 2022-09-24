@@ -13,3 +13,5 @@ echo "Downloading binaries for Go version ${GO_VERSION}"
 curl -SL "https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz" | tar -xzC /usr/local/
 echo "Running 'go version'"
 /usr/local/go/bin/go version
+/usr/local/go install golang.org/x/tools/gopls@latest
+/usr/local/go install github.com/go-delve/delve/cmd/dlv@latest

@@ -12,3 +12,18 @@ sudo apt-get install -y code
 # Copy VSCode settings
 mkdir -p $HOME/.config/Code/User/
 cp -f ./configs/.config/Code/User/settings.json $HOME/.config/Code/User/settings.json
+
+# Install extensions
+EXT_INSTALL_CMD=code --install-extension --force
+# Appearance
+$EXT_INSTALL_CMD azemoh.one-monokai
+$EXT_INSTALL_CMD vscode-icons-team.vscode-icons
+# C++
+$EXT_INSTALL_CMD twxs.cmake
+$EXT_INSTALL_CMD ms-vscode.cmake-tools
+$EXT_INSTALL_CMD ms-vscode.cpptools
+$EXT_INSTALL_CMD ms-vscode.cpptools-extension-pack
+$EXT_INSTALL_CMD ms-vscode.cpptools-themes
+$EXT_INSTALL_CMD jeff-hykin.better-cpp-syntax
+# Go
+$EXT_INSTALL_CMD golang.go

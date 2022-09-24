@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Install zsh and ohmyzsh
 sudo rm -f /etc/zsh/zshenv
 sudo mkdir -p /etc/zsh/

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Install Signal via trusted repository
 sudo rm -f /etc/apt/sources.list.d/signal*.list
 sudo rm -f /usr/share/keyrings/signal-desktop-keyring.gpg

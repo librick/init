@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Install Flatpaks
 sudo apt-get install -y flatpak
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo

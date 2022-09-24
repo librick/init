@@ -22,6 +22,8 @@ echo -ne "
 sh -c ./set-environment.sh
 # Disable swap
 sudo swapoff -a
+# Set GRUB timeout
+sudo sed -i 's/timeout=5/timeout=1/g' /boot/grub/grub.cfg
 # Copy git configs
 mkdir -p $HOME/.config/git
 cp ./configs/.config/git/* $HOME/.config/git/
@@ -34,7 +36,7 @@ xargs sudo apt-get install -y < ./pkg-files/base.txt
 sudo apt-get install -y vi vim nano
 # Ensure that ufw is installed and enabled
 sudo apt-get install -y ufw
-sudo systemctl enable ufw
+sudo systemctl enable --now ufw
 # Set up networking
 sudo apt-get install -y network-manager
 sudo systemctl enable --now NetworkManager

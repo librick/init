@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Install VSCode via trusted repository
 rm -f /etc/apt/keyrings/packages.microsoft.gpg
 rm -f /etc/apt/sources.list.d/vscode.list

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Install fonts
 sudo apt-get install -y curl
 rm -rf ~/.local/share/fonts/NerdFonts

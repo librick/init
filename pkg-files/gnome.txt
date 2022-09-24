@@ -17,3 +17,4 @@ gnome-tweaks
 nautilus
 seahorse
 simple-scan
+xdg-user-dirs

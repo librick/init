@@ -9,6 +9,7 @@ hexchat
 keepassxc
 libreoffice-calc
 libreoffice-writer
+neofetch
 neovim
 pavucontrol
 pdfmod

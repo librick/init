@@ -7,3 +7,4 @@ flatpak install -y flathub com.brave.Browser
 flatpak install -y flathub com.discordapp.Discord
 flatpak install -y flathub.com org.telegram.desktop
 flatpak install -y flathub.com org.blender.Blender
+flatpak install flathub md.obsidian.Obsidian

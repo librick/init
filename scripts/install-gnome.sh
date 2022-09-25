@@ -13,5 +13,5 @@ cp -f ./configs/.face $HOME/.config/.face
 # Set default font
 gsettings set org.gnome.desktop.interface monospace-font-name "Hack Nerd Font Mono Regular 11"
 gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
-
+gsettings set org.gtk.Settings.FileChooser sort-directories-first true
 

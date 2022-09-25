@@ -2,9 +2,11 @@
 # Install fonts
 sudo apt-get autoremove
 sudo apt-get update
-sudo apt-get install -y curl unzip
-rm -rf ~/.local/share/fonts/NerdFonts
-mkdir -p ~/.local/share/fonts/NerdFonts
+sudo apt-get install -y curl unzip fonts-noto-color-emoji
+mkdir -p $HOME/.config/fontconfig/conf.d
+\cp ./configs/.config/fontconfig/conf.d/01-emoji.conf $HOME/.config/fontconfig/conf.d/
+rm -rf $HOME/.local/share/fonts/NerdFonts
+mkdir -p $HOME/.local/share/fonts/NerdFonts
 BASE_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2"
 curl -fLo "${HOME}/.local/share/fonts/NerdFonts/Hack.zip" "${BASE_URL}/Hack.zip"
 curl -fLo "${HOME}/.local/share/fonts/NerdFonts/FiraCode.zip" "${BASE_URL}/FiraCode.zip"

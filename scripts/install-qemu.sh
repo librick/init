@@ -6,5 +6,5 @@ sudo systemctl start libvirtd
 sudo virsh net-start default
 sudo virsh net-autostart default
 sudo virsh net-list --all
-sudo adduser $USER libvirt
-sudo adduser $USER libvirt-qemu
+#sudo adduser $USER libvirt
+#sudo adduser $USER libvirt-qemu

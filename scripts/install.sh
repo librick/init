@@ -19,19 +19,20 @@ echo -ne "
 # After installing, set up Firefox with https://ffprofile.com.
 
 # Set initial environment variables
-sh -c ./set-environment.sh
+sh -c ./scripts/set-environment.sh
 # Disable swap
 sudo swapoff -a
 # Set GRUB timeout
 BOOT_GRUB_LOCATION=/boot/grub
 BOOT_THEME_NAME=framework
+rm -rf distro-grub-themes
 git clone https://github.com/AdisonCavani/distro-grub-themes.git
 sudo sed -i 's/#?GRUB_TIMEOUT=[0-9]+/GRUB_TIMEOUT=1/g' /etc/default/grub
 # Install GRUB theme
 sudo sed -i 's/#?GRUB_GFXMODE=.*/GRUB_GFXMODE=1920x1080/g' /etc/default/grub
 sudo cp -r "./distro-grub-themes/customize/${BOOT_THEME_NAME}/" "${BOOT_GRUB_LOCATION}/themes"
+rm -rf distro-grub-themes
 BOOT_THEME_TXT="${BOOT_GRUB_LOCATION}/themes/${BOOT_THEME_NAME}/theme.txt"
-sudo echo GRUB_THEME="$BOOT_THEME_TXT" >> /etc/default/grub
 sudo sed -i '/GRUB_THEME=/d' /etc/default/grub
 sudo bash -c "echo GRUB_THEME="$BOOT_THEME_TXT" >> /etc/default/grub"
 sudo update-grub
@@ -54,15 +55,14 @@ sudo apt-get install -y network-manager
 sudo systemctl enable --now NetworkManager
 
 # Delegate work to other scripts
-sh -c ./initial-setup.sh
-sh -c ./install-fonts.sh
-sh -c ./install-gnome.sh
-sh -c ./install-zsh.sh
-sh -c ./install-cargo-and-lsd.sh
-sh -c ./install-go.sh
-sh -c ./install-adb.sh
-sh -c ./install-signal.sh
-sh -c ./install-vscode.sh
-sh -c ./install-flatpaks.sh
-sh -c ./install-packages.sh
+sh -c ./scripts/install-fonts.sh
+sh -c ./scripts/install-gnome.sh
+sh -c ./scripts/install-zsh.sh
+sh -c ./scripts/install-cargo-and-lsd.sh
+sh -c ./scripts/install-go.sh
+sh -c ./scripts/install-adb.sh
+sh -c ./scripts/install-signal.sh
+sh -c ./scripts/install-vscode.sh
+sh -c ./scripts/install-flatpaks.sh
+sh -c ./scripts/install-packages.sh
 echo "Done :)"

@@ -8,3 +8,6 @@ sudo apt-get install -y gnome-console nautilus-extension-gnome-console
 cp -f ./configs/.face $HOME/.config/.face
 # Set default font
 gsettings set org.gnome.desktop.interface monospace-font-name "Fira Code 11"
+gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
+
+

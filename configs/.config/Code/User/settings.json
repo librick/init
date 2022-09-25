@@ -14,6 +14,7 @@
     "workbench.preferredDarkColorTheme": "One Monokai",
     "workbench.colorTheme": "Visual Studio Dark - C++",
     "telemetry.telemetryLevel": "off",
+    "workbench.startupEditor": "none",
     "workbench.enableExperiments": false,
     "update.mode": "none",
     "editor.fontFamily": "FiraCode Nerd Font",
@@ -23,4 +24,5 @@
     ],
     "editor.minimap.enabled": false,
     "window.zoomLevel": 1,
+    "vsicons.dontShowNewVersionMessage": true
 }

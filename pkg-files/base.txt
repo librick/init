@@ -1,12 +1,11 @@
 build-essential
-fontconfig
-libfontconfig1-dev
 cmake
 curl
 figlet
 fontconfig
 git
 gpg
+libfontconfig1-dev
 pkg-config
 sudo
 tree

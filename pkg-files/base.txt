@@ -1,4 +1,6 @@
 build-essential
+fontconfig
+libfontconfig1-dev
 cmake
 curl
 figlet

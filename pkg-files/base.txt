@@ -5,6 +5,7 @@ figlet
 fontconfig
 git
 gpg
+pkg-config
 sudo
 tree
 ufw

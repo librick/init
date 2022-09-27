@@ -1,5 +1,6 @@
 baobab
 cheese
+dconf-editor
 eog
 evince
 gdm3

@@ -14,4 +14,7 @@ cp -f ./configs/.face $HOME/.config/.face
 gsettings set org.gnome.desktop.interface monospace-font-name "Hack Nerd Font Mono Regular 11"
 gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 gsettings set org.gtk.Settings.FileChooser sort-directories-first true
+gsettings set org.gnome.desktop.peripherals.touchpad click-method areas
+gsettings set org.gnome.desktop.app-folders folder-children "[]"
+
 

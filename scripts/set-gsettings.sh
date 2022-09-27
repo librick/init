@@ -8,15 +8,13 @@ gsettings set org.gtk.Settings.FileChooser sort-directories-first true
 gsettings set org.gnome.desktop.peripherals.touchpad click-method areas
 # Disable grouping apps into folders in the overview
 gsettings set org.gnome.desktop.app-folders folder-children "[]"
-# gsettings set org.gnome.Cheese photo-path 'somepath'
-# gsettings set org.gnome.Cheese video-path 'somepath'
 # Set the calculator to "advanced" mode
 gsettings set org.gnome.calculator button-mode advanced
 # Set the calculator to disable requesting currency conversion rates
 gsettings set org.gnome.calculator refresh-interval 0
 # Disable automatic timezones
 gsettings set org.gnome.desktop.datetime automatic-timezone false
-# Set 24 hour clock
+# Set 24 hour clock format
 gsettings set org.gnome.desktop.interface clock-format 24h
 gsettings set org.gtk.Settings.FileChooser clock-format 24h
 # Show the current day of the week

@@ -9,5 +9,11 @@ echo "Downloading binaries for Go version ${GO_VERSION}"
 curl -SL "https://dl.google.com/go/${GO_VERSION}.linux-amd64.tar.gz" | sudo tar -xzC /usr/local/
 echo "Running 'go version'"
 /usr/local/go/bin/go version
-sudo /usr/local/go/bin/go install golang.org/x/tools/gopls@latest
-sudo /usr/local/go/bin/go install github.com/go-delve/delve/cmd/dlv@latest
+# Install dependencies for the Go VSCode extension,
+# See: https://github.com/golang/vscode-go/wiki/tools.
+# These should not be installed as root,
+# as the GOPATH environment variable should be in the user's home directory.
+# E.g., GOPATH=/home/$USER/.local/share/go.
+/usr/local/go/bin/go install -v golang.org/x/tools/gopls@latest
+/usr/local/go/bin/go install -v github.com/go-delve/delve/cmd/dlv@latest
+/usr/local/go/bin/go install -v github.com/ramya-rao-a/go-outline@latest

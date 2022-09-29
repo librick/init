@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Install Go
+
 # Get the most recent version number, e.g., "go1.9.7" (w/o quotes).
 REPO=https://github.com/golang/go.git
 GO_VERSION=$(curl https://go.dev/VERSION?m=text)
@@ -15,5 +16,6 @@ echo "Running 'go version'"
 # as the GOPATH environment variable should be in the user's home directory.
 # E.g., GOPATH=/home/$USER/.local/share/go.
 /usr/local/go/bin/go install -v golang.org/x/tools/gopls@latest
+/usr/local/go/bin/go install -v golang.org/x/tools/cmd/goimports@latest
 /usr/local/go/bin/go install -v github.com/go-delve/delve/cmd/dlv@latest
 /usr/local/go/bin/go install -v github.com/ramya-rao-a/go-outline@latest

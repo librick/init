@@ -18,4 +18,6 @@ echo "Running 'go version'"
 /usr/local/go/bin/go install -v golang.org/x/tools/gopls@latest
 /usr/local/go/bin/go install -v golang.org/x/tools/cmd/goimports@latest
 /usr/local/go/bin/go install -v github.com/go-delve/delve/cmd/dlv@latest
+/usr/local/go/bin/go install -v github.com/mdempsky/gocode@latest
 /usr/local/go/bin/go install -v github.com/ramya-rao-a/go-outline@latest
+/usr/local/go/bin/go install -v honnef.co/go/tools/cmd/staticcheck@latest

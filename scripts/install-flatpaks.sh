@@ -9,4 +9,4 @@ flatpak install -y flathub org.telegram.desktop
 flatpak install -y flathub org.blender.Blender
 flatpak install -y flathub md.obsidian.Obsidian
 flatpak install -y flathub com.rafaelmardojai.Blanket
-
+flatpak install -y com.github.tchx84.Flatseal

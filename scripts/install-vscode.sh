@@ -26,3 +26,4 @@ code --install-extension ms-vscode.cpptools-extension-pack --force
 code --install-extension ms-vscode.cpptools-themes --force
 code --install-extension jeff-hykin.better-cpp-syntax --force
 code --install-extension golang.go --force
+code --install-extension fkrull.gtk-dark-titlebar --force

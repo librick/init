@@ -5,5 +5,9 @@ export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 curl https://sh.rustup.rs --proto '=https' --tlsv1.3 -sSf | sh -s -- -y
 source "$CARGO_HOME/env"
-# Use cargo to install lsd
+# Install lsd as a pretty ls alternative 
 cargo install lsd
+# Install simple-http-server for hosting files quickly
+cargo install simple-http-server
+
+

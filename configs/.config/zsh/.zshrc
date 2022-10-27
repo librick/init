@@ -65,6 +65,7 @@ export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:$XDG_DATA_DIRS"
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig
+export MOZ_ENABLE_WAYLAND=1
 
 export ANDROID_HOME="$XDG_DATA_HOME"/android
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg

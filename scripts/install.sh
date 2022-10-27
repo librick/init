@@ -65,4 +65,5 @@ sh -c ./scripts/install-signal.sh
 sh -c ./scripts/install-vscode.sh
 sh -c ./scripts/install-flatpaks.sh
 sh -c ./scripts/install-packages.sh
+sh -c ./scripts/install-nvim.sh
 echo "Done :)"

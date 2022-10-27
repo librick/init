@@ -1,6 +1,7 @@
 blueman
 celluloid
 chromium
+deluged
 deluge-gtk
 gedit
 ghex

@@ -8,6 +8,7 @@ source "$CARGO_HOME/env"
 # Install lsd as a pretty ls alternative 
 cargo install lsd
 # Install simple-http-server for hosting files quickly
+sudo apt-get update && sudo apt-get install -y libssl-dev
 cargo install simple-http-server
 
 

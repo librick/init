@@ -21,3 +21,5 @@ echo "Running 'go version'"
 /usr/local/go/bin/go install -v github.com/mdempsky/gocode@latest
 /usr/local/go/bin/go install -v github.com/ramya-rao-a/go-outline@latest
 /usr/local/go/bin/go install -v honnef.co/go/tools/cmd/staticcheck@latest
+/usr/local/go/bin/go install -v google.golang.org/protobuf/cmd/protoc-gen-go@latest
+

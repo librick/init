@@ -12,6 +12,7 @@ libreoffice-calc
 libreoffice-writer
 neofetch
 neovim
+openvpn
 pavucontrol
 pdfmod
 simple-scan

@@ -43,7 +43,7 @@ cp ./configs/.config/git/* $HOME/.config/git/
 # Make directory for gpg
 mkdir -p $HOME/.local/share/gnupg
 sudo chown -R $USER $HOME/.local/share/gnupg
-chmod 700 $HOME/.local/share/gnupg
+sudo chmod 700 $HOME/.local/share/gnupg
 
 # Install common tools
 sudo rm -f /etc/apt/sources.list.d/*.list

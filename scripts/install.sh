@@ -40,6 +40,8 @@ sudo update-grub
 # Copy git configs
 mkdir -p $HOME/.config/git
 cp ./configs/.config/git/* $HOME/.config/git/
+# Make directory for gpg
+mkdir -p $HOME/.local/share/gnupg
 # Install common tools
 sudo rm -f /etc/apt/sources.list.d/*.list
 sudo apt-get install -y apt-transport-https

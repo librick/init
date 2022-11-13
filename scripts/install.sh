@@ -60,6 +60,7 @@ sudo apt-get install -y network-manager
 sudo systemctl enable --now NetworkManager
 
 # Delegate work to other scripts
+sh -c ./scripts/install-yubikey.sh
 sh -c ./scripts/install-fonts.sh
 sh -c ./scripts/install-gnome.sh
 sh -c ./scripts/install-zsh.sh

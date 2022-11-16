@@ -1,0 +1,16 @@
+# Automate updates of flatpak packages
+# Written by Eric McDonald, MIT license
+# Inspired by/taken from https://www.jwillikers.com/automate-flatpak-updates-with-systemd
+# Expects to find flatpak at /usr/bin/flatpak
+# Should be installed to /etc/systemd/system/update-system-flatpaks.service
+# Should also include /etc/systemd/user/update-user-flatpaks.timer to automate updates
+[Unit]
+Description=Update user flatpaks
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/flatpak update -u -y --noninteractive
+
+[Install]
+WantedBy=default.target
+

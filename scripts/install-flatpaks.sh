@@ -23,3 +23,7 @@ mkdir -p $systemdUserDir
 cp -f ./configs/.config/systemd/user/*.{service,timer} $systemdUserDir/
 systemctl --user enable --now update-user-flatpaks.timer
 
+# Attempt to refresh desktop application icons (.desktop files)
+xdg-desktop-menu forceupdate
+update-desktop-database $USER/.local/share/flatpak/exports/share/applications/
+

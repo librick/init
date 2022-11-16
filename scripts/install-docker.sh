@@ -34,7 +34,9 @@ modprobe kvm
 modprobe kvm_intel 2> /dev/null
 modprobe kvm_amd 2> /dev/null
 # Add the current user to the kvm group
-sudo usermod -aG kvm $USER
+sudo usermod -aG kvm ${USER}
+# Add the current user to the docker group
+sudo usermod -aG docker ${USER}
 
 # Run docker hello world image
 sudo docker run hello-world

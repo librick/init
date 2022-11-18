@@ -17,6 +17,9 @@ unzip -o "${HOME}/.local/share/fonts/NerdFonts/Noto.zip" -d "${HOME}/.local/shar
 rm -f "${HOME}/.local/share/fonts/NerdFonts/Hack.zip"
 rm -f "${HOME}/.local/share/fonts/NerdFonts/FiraCode.zip"
 rm -f "${HOME}/.local/share/fonts/NerdFonts/Noto.zip"
+# Copy other fonts
+mkdir -p $HOME/.local/share/fonts
+\cp -r ./configs/.local/share/fonts/* $HOME/.local/share/fonts/
 fc-cache -v
 gsettings set org.gnome.desktop.interface monospace-font-name "Hack Nerd Font Mono Regular 11"
 

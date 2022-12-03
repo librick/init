@@ -21,6 +21,7 @@ flatpak install -u -y com.github.tchx84.Flatseal
 systemdUserDir=$XDG_CONFIG_HOME/systemd/user
 mkdir -p $systemdUserDir
 cp -f ./configs/.config/systemd/user/*.{service,timer} $systemdUserDir/
+systemctl --user enable --now update-user-flatpaks.service
 systemctl --user enable --now update-user-flatpaks.timer
 
 # Attempt to refresh desktop application icons (.desktop files)

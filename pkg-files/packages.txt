@@ -15,6 +15,7 @@ neovim
 openvpn
 pavucontrol
 pdfmod
+qrencode
 simple-scan
 simplescreenrecorder
 texmaker

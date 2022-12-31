@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # Set various Gnome settings
 
+# Disable notifications on lock screen
+gsettings set org.gnome.desktop.notifications show-in-lock-screen false
 # Sort directories before files
 gsettings set org.gtk.Settings.FileChooser sort-directories-first true
 # Right click by clicking the right side of the touchpad

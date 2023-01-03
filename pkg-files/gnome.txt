@@ -11,6 +11,7 @@ gnome-font-viewer
 gnome-logs
 gnome-screenshot
 gnome-session
+gnome-software-plugin-flatpak
 gnome-system-monitor
 gnome-terminal
 gnome-text-editor

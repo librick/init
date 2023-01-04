@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # Set various Gnome settings
 
+# Disable caps lock
+gsettings set org.gnome.desktop.input-sources xkb-options "['caps:none']"
 # Disable notifications on lock screen
 gsettings set org.gnome.desktop.notifications show-in-lock-screen false
 # Sort directories before files
